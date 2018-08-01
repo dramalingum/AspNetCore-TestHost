@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TestHostRepos;
 
 namespace TestHostApp.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly ICarsRepo _carsRepo;
+
+        public ValuesController(ICarsRepo carsRepo)
+        {
+            _carsRepo = carsRepo;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value-1", "value-2" };
+            return _carsRepo.GetCars();
         }
 
         // GET api/values/5

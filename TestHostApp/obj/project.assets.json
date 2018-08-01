@@ -2020,6 +2020,15 @@
         "runtime": {
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "TestHostRepos/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/TestHostRepos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestHostRepos.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win7-x86": {
@@ -3927,6 +3936,15 @@
         },
         "runtime": {
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "TestHostRepos/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/TestHostRepos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestHostRepos.dll": {}
         }
       }
     }
@@ -7748,12 +7766,18 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "TestHostRepos/1.0.0": {
+      "type": "project",
+      "path": "../TestHostRepos/TestHostRepos.csproj",
+      "msbuildProject": "../TestHostRepos/TestHostRepos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "Microsoft.AspNetCore >= 2.0.2",
-      "Microsoft.AspNetCore.Mvc >= 2.0.3"
+      "Microsoft.AspNetCore.Mvc >= 2.0.3",
+      "TestHostRepos >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7790,7 +7814,11 @@
       },
       "frameworks": {
         "net472": {
-          "projectReferences": {}
+          "projectReferences": {
+            "\\\\Mac\\Home\\Dev\\Spikes\\AspNetCore-TestHost\\TestHostRepos\\TestHostRepos.csproj": {
+              "projectPath": "\\\\Mac\\Home\\Dev\\Spikes\\AspNetCore-TestHost\\TestHostRepos\\TestHostRepos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

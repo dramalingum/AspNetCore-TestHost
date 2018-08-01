@@ -15,6 +15,8 @@ namespace TestHostApp.Tests
 
         public ValuesControllerTests()
         {
+            
+
             var webHost = new WebHostBuilder()
             //.ConfigureTestServices(s => s.AddSingleton<IFoo, MockedFoo>())
             .UseStartup<Startup>();
